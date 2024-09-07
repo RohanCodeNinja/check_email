@@ -1,0 +1,15 @@
+mylist1 = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", "/", ":", ";", "<", "=", ">", "?",
+           " ", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"]
+mylist2 = ["@", ".", "gmail", "np", "com", "co", "info", "edu", "gov", "mil", "biz"]
+
+x = input("Enter your email to check: ")
+
+# Check for invalid characters
+if any(char in x for char in mylist1):
+    print("This is not a valid email")
+else:
+    # Check for valid domain
+    if any(domain in x for domain in mylist2):
+        print("This email is valid")
+    else:
+        print("This is not a valid email")
